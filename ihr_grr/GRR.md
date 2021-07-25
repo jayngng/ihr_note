@@ -21,12 +21,12 @@
 
 1. Start new flows → Network → Netstat → Launch
 
-![[Start network flows.png]]
+![image](Start%20network%20flows.png)
 
 + To view the result:
 	+ Manage launched flows → Netstat → Results
 
-![[Flow results.png]]
+![image](Flow%20results.png)
 
 <hr>
 
@@ -34,7 +34,7 @@
 
 + Malicious process:  `rundll32.exe` is running javascript code
 
-![[Win10 abnormalities.png]]
+![image](Win10%20abnormalities.png)
 
 + Persistence in registry: 
 
@@ -44,7 +44,7 @@ HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows NT/CurrentVersion/SilentProcessExi
 
 + Everytime the `calc.exe` process is terminated, the malicious piece of javascript code will be executed.
 
-![[Persistence in registry.png]] 
+![image](Persistence%20in%20registry.png)
 
 + https://www.tanium.com/blog/another-persistence-method-reported-overnight-on-twitter-how-tanium-can-help/
 
@@ -55,19 +55,19 @@ HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows NT/CurrentVersion/SilentProcessExi
 
 1. Powershell RAT.
 
-![[Win2012-MaliciousProcess.png]]
+![image](Win2012-MaliciousProcess.png)
 
 
 2. `cacl.exe` process.
 
-![[calc.exe process.png]]
+![image](calc.exe%20process.png)
 
 + Analyze `calc.exe` process memory with Rekall plugin
 + Start new flows → Memory → AnalyzeClientMemory → PLugin
 	+ `Idrmodules`
 	+ Args: `proc_regex` = calc.exe 
 
-![[DLL injection.png]]
+![image](DLL%20injection.png)
 
 + Why `System.Management.Automation.dll` is malicious in this situation?
 	+ `System.Management.Automation.dll` is a DLL responsible for every PowerShell Operation. It means that there is a malicious PowerShell has been injected into `calc.exe`.
@@ -78,7 +78,7 @@ HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows NT/CurrentVersion/SilentProcessExi
 		+	Change file extension from `.xlsx` → `.zip`
 		+ Extract and navigate to `xl` → `activeX` directory.
 		+ Analyze the `activeX1.bin` using `xxd`,
-		+ ![[activeX1 hex.png]]
+		+ ![image](activeX1%20hex.png)
 
 → The `.xlsx` file contains Flash Application. Utilizing Flash vulnerability to obtain code execution.
 
@@ -87,16 +87,16 @@ HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows NT/CurrentVersion/SilentProcessExi
 # Abnormalities - xubuntu
 + `/home/elsuser/Downloads` contains an executable `bleidi`.
 
-![[bleidi executable.png]]
+![image](bleidi%20executable.png)
 
 + Download and analyze the executable.
 + `strings bleidi`
 
-![[kernel priesc.png]]
+![image](kernel%20priesc.png)
 
 + It looks like this exploit code:
 
-![[exploit code.png]]
+![image](exploit%20code.png)
 
 + The attacker is trying to escalate his privilege.
 
