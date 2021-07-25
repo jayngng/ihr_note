@@ -21,7 +21,7 @@
 
 1. Start new flows → Network → Netstat → Launch
 
-![[Start network flows.png]]
+![[ihr_grr/Start network flows.png]]
 
 + To view the result:
 	+ Manage launched flows → Netstat → Results
@@ -103,8 +103,13 @@ HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows NT/CurrentVersion/SilentProcessExi
 <hr>
 
 ### Take away concepts
+
 → Always check running processes on the target. Especially the one with high privilege.
+
 → Always check network information since it'll tell us attacker traffic.  
+
 → Always check the registry, a go-to location for persistence.
+
 → Some common processes `notepad.exe` and `calc.exe` sometimes look benign. However, those are juicy target for attacker to inject malicious code.
+
 → `/Downloads`, `/tmp`, `/windows/temp`, `/dev/shm`, etc might reveal attacker artifacts.
