@@ -10,7 +10,7 @@
 # Gather basic information of machines
 + Click onto one machine → `Full details` 
 
-![image]("Machine details.png")  
+![image](machine_details.png)  
 
 <hr>
 
