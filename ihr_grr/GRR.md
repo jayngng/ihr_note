@@ -1,7 +1,7 @@
 # List all the deployed GRR clients
 + Navigate to Search bar → Enter
 
-!(Search machines.png)
+!(Search%20machines.png)
 
 	Note: wait until all the bullets turn green.
 	
