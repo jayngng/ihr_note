@@ -1,7 +1,7 @@
 # List all the deployed GRR clients
 + Navigate to Search bar → Enter
 
-![[Search machines.png]]
+!(Search machines.png)
 
 	Note: wait until all the bullets turn green.
 	
@@ -10,7 +10,7 @@
 # Gather basic information of machines
 + Click onto one machine → `Full details` 
 
-![[Machine details.png]]  
+![Machine details][[Machine details.png]]  
 
 <hr>
 
@@ -21,7 +21,7 @@
 
 1. Start new flows → Network → Netstat → Launch
 
-![[ihr_grr/Start network flows.png]]
+![[Start network flows.png]]
 
 + To view the result:
 	+ Manage launched flows → Netstat → Results
